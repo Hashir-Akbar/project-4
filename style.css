@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+
+body, html
+{
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+body, h1, h2, h3, h4, h5, h6{
+    font-family: "Lato", sans-serif;
+}
+
+
+.header nav ul, .header {
+    display: flex;
+    align-items: center;
+}
+.header{
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header nav ul{
+    list-style: none;
+
+}
+.header nav ul li a, .header > div .search-icon{
+    padding: 8px 16px;
+    text-transform: uppercase;
+display: block;
+cursor: pointer;
+
+}
+.header > div .search-icon:hover{
+    color: #fff;
+    background: red;
+
+
+}
+.header nav ul li a:hover{
+    background: #ccc;
+    color: #000;
+}
+/* main */
+.hero{
+    text-align: center;
+    background-image: url('media/parallax1.jpg');
+    min-height: 400px;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    opacity: 0.75;
+
+}
+.hero  h1{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  background: #000;
+  opacity: 1;
+  padding: 5px 24px;
+  letter-spacing: 10px;
+  font-size: 24px ;
+  font-weight: 500;
+  animation: opacity 0.8s;
+}
+
+@keyframes opacity {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header-scroll-style{
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    animation: headerScroll 0.4s;
+
+}
+
+@keyframes headerScroll {
+    0%{
+        top: -300px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+.container{
+    max-width: 980px;
+    padding-block: 64px;
+    padding-inline: 16px;
+    margin-inline:auto;
+}
+
+.about-me h1, .my-work h3, .text-center, .contact h3 {
+    text-align: center;
+}
+
+.text-center{
+    font-style: italic;
+    width: 100%;
+    display: inline-block;
+}
+.about-me .container,.contact .container,  .about-me .cards .card-1, .my-work .container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about-me .cards, .about-me .container,  .about-me .cards .card-1 h4{
+    display: flex;
+ 
+}
+.about-me .cards .card-1 h4{
+    gap: .6em;
+    align-items: center;
+    justify-content: center;
+}
+.about-me .cards .card-1{
+    text-align: center;
+}
+
+.about-me .cards > div{
+    width: 49%;
+    padding: 12px 24px;
+}
+.about-me .container .skills-sec > h4{
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.125rem;
+    
+}.about-me .container .skills-sec .skills  h4{
+    letter-spacing: 10px;
+    font-weight: 500;
+    margin-block:1em ;
+}
+.about-me .container .skills-sec .skills .skill-value{
+    background: #f1f1f1;
+ 
+}
+.about-me .container .skills-sec .skills .skill-value .value{
+    background: #616161;
+    color: white;
+
+    text-align: center;
+}
+.about-me .container .skills-sec .skills .skill-1 .skill-value .value{
+    width: 90%;
+}
+.about-me .container .skills-sec .skills .skill-2 .skill-value .value{
+    width: 85%;
+}
+.about-me .container .skills-sec .skills .skill-3 .skill-value .value{
+    width: 75%;
+}
+
+.portfolio .projects{
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    background: #616161;
+    padding: 2em;
+    color: white;
+}
+.portfolio .projects> div{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+}
+.portfolio .projects> div > span:last-child{
+    font-weight: 500;
+}
+.portfolio  .img-group{
+  background-image: url('media/parallax2.jpg');
+  min-height: 400px;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  opacity: 0.75;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 36px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.my-work .my-work-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.my-work .my-work-images img{
+    width: 23.4%;
+}
+.my-work button{
+    border: none;
+    background: none;
+}
+.my-work button a{
+    padding: 12px 24px;
+    background: #f1f1f1;
+    display: inline-block;
+    margin-top: 40px;
+}
+.my-work button a:hover{
+    cursor: pointer;
+    background: #ccc;
+}
+
+.contact .img-group{
+    background-image: url('media/parallax3.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    position:relative
+    ;opacity: 0.75;
+}
+.contact .cards{
+    display: flex;
+    gap: 2em;
+}
+.contact .cards .card-1 img{
+ border-radius: 4px;
+}
+.contact .cards .card-1{
+    width:33.33%;
+}
+.contact .cards .card-2{
+    width: 66.666%;
+}
+.contact .cards .card-2 .address{
+    display: flex;
+    gap: .1em;
+    font-size: 18px;
+    padding-top: 1em;
+    padding-bottom: .6em;
+    flex-direction: column;
+}
+.contact .cards .card-2 .address >div i{
+
+ font-size: 1.5rem;
+}.contact .cards .card-2 .address >div {
+    display: flex;align-items: center;gap: 1em;
+}
+.contact .cards .card-2 p{
+    padding-bottom: 1em;
+}
+.contact .cards .card-2 form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em;
+}
+.contact .cards .card-2 form input:nth-child(3){
+    grid-column: 1/ span 2;
+}
+.contact .cards .card-2 form input{
+    padding: 8px;
+    border: 1px solid #ccc;
+
+    width: 100%;
+}
+.contact .cards .card-2 form button{
+    padding: 8px 16px;
+   grid-column: span 2;
+   justify-self: end;
+   border: none;
+   color: white;
+   background: #000;
+}
+.contact .cards .card-2 form button:hover{
+    color: #000;
+    background: #ccc;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5em;
+    background: #000;
+    opacity: 0.60;
+    color: white;
+    gap: 1.4em;
+}
+.footer:hover{
+ opacity: 1;
+}
+.footer button{
+
+    border: none;
+}
+.footer button a{
+    display:flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: .5em;
+}
+.footer button a:hover{
+    background: #ccc;
+}
+.footer .icons {
+    display: flex;
+    gap: .3em;
+}
+.footer .icons i{
+    font-size: 25px;
+   
+}
+.footer .icons i:hover{
+    opacity: 0.60;
+    cursor: pointer;
+}
+.footer .copyright a{
+    text-decoration: underline;
+}
+
+
+
+@media (max-width:601px){
+  .display-mobile-none{
+    display: none !important;
+  }
+  .header-container  {
+    position: relative;
+  }
+  .header > div .mobile-nav{
+    position: absolute;
+    left: -100%;
+    min-width: 100%;
+    top: 44px;
+    left: 0;
+    background:#fff;
+    color: #000;
+  }
+
+  .header > div .mobile-nav a{
+    padding: 8px 16px;
+    width: 100%;
+    display: inline-block;
+  }
+  .header > div .mobile-nav a:hover{
+    background: #ccc;
+  }
+  .about-me .cards .card-1{
+    width: 100%;
+  }
+
+  .portfolio .projects {
+    flex-direction: column;
+    gap: 2em;
+    font-size: 1.12rem;
+  }
+  .my-work .my-work-images, .contact .cards{
+    flex-direction: column;
+  }
+  .my-work .my-work-images img, .contact .cards .card-1,  .contact .cards .card-2{
+    width: 100%;
+  }
+  .contact .cards .card-2 form{
+    grid-template-columns: 1fr;
+  }
+  .contact .cards .card-2 form input:nth-child(3), .contact .cards .card-2 form button{
+    grid-column: auto;
+  }
+}
+
+@media (min-width:601px){
+    .display-dekstop-none{
+      display: none !important;
+    }
+  }
